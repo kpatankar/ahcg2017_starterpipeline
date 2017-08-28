@@ -33,6 +33,13 @@ To access help use the following command:
 ```{sh}
 python3 ahcg_pipeline.py -h
 ```
-# **Liquid_Biopsy** 
-I am Kalyani Patankar, a second-year bioinformatics student.
-My hobbies are cooking and baking. 
+# **Liquid Biopsy** 
+A liquid biopsy is a non-invasive alternative to tissue biopsy. There are three different forms of liquid biopsy which can be obtained 
+through blood or other body fluids; circulating free DNA (cfDNA), circulating tumor DNA (ctDNA) and extracellular vesicles.
+
+## **Requirements for GATK analysis**
+1. Reference genome sequence in fasta format
+2. Sequencing Reads ( SAM/BAM format)
+3. Intervals of interest
+4. Reference ordered data file formats ( VCF/BED format)
+5. Oracle Java Version 1.8
