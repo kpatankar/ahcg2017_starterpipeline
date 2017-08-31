@@ -36,6 +36,10 @@ python3 ahcg_pipeline.py -h
 # **Data Acqusition Team** 
 The data acqusition team used the data from the paper "Development and validation of a clinical cancer
 genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. This data was downloaded using the *fastq-dump* utility from the SRA Toolkit.
+The command used is:
+```{sh}
+fastq-dump --split-files SRR948994
+```
 
 ## **Requirements for GATK analysis**
 1. Reference genome sequence in fasta format
