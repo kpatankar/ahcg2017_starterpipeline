@@ -33,9 +33,9 @@ To access help use the following command:
 ```{sh}
 python3 ahcg_pipeline.py -h
 ```
-# **Liquid Biopsy** 
-A liquid biopsy is a non-invasive alternative to tissue biopsy. There are three different forms of liquid biopsy which can be obtained 
-through blood or other body fluids; circulating free DNA (cfDNA), circulating tumor DNA (ctDNA) and extracellular vesicles.
+# **Data Acqusition Team** 
+The data acqusition team used the data from the paper "Development and validation of a clinical cancer
+genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. This data was downloaded using the *fastq-dump* utility from the SRA Toolkit.
 
 ## **Requirements for GATK analysis**
 1. Reference genome sequence in fasta format
