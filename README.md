@@ -41,9 +41,3 @@ The command used is:
 fastq-dump --split-files SRR948994
 ```
 
-## **Requirements for GATK analysis**
-1. Reference genome sequence in fasta format
-2. Sequencing Reads ( SAM/BAM format)
-3. Intervals of interest
-4. Reference ordered data file formats ( VCF/BED format)
-5. Oracle Java Version 1.8
