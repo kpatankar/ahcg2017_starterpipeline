@@ -40,4 +40,12 @@ The command used is:
 ```{sh}
 fastq-dump --split-files SRR948994
 ```
+**Installing VirtualBox**
 
+VirtualBox is useful to run more than one operating systems simultaneously. It makes software installations easy. It creates an isolated virtual environment from host OS. If anything goes wrong snapshot feature of VirtualBox can reset the VM to particular date/time. Thus, making it easier for testing and disaster recovery.
+
+**Installation**
+VirtualBox was installed on Ubuntu 16.04 operating system following instuctions on the link.
+1. [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
+
+VirtualBox with name Ubuntu_VM_KP was installed on local machine.
