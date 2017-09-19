@@ -33,7 +33,7 @@ To access help use the following command:
 ```{sh}
 python3 ahcg_pipeline.py -h
 ```
-#**Mission**
+# **Mission**
 The goal of this project is to standardize a variant calling pipeline for the detection of variants in the circulating tumor DNA (ctDNA).
 ctDNA are recent biomarker which can help in deeper understanding of cancer genomics.
 
