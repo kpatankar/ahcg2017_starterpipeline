@@ -33,6 +33,11 @@ To access help use the following command:
 ```{sh}
 python3 ahcg_pipeline.py -h
 ```
+#**Mission**
+The goal of this project is to standardize a variant calling pipeline for the detection of variants in the circulating tumor DNA (ctDNA).
+ctDNA are recent biomarker which can help in deeper understanding of cancer genomics.
+
+
 # **Data Acqusition Team** 
 The data acqusition team used the data from the paper "Development and validation of a clinical cancer
 genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. This data was downloaded using the *fastq-dump* utility from the SRA Toolkit.
