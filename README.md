@@ -40,7 +40,9 @@ ctDNA are recent biomarker which can help in deeper understanding of cancer geno
 
 # **Data Acqusition Team** 
 The data acqusition team used the data from the paper "Development and validation of a clinical cancer
-genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. This data was downloaded using the *fastq-dump* utility from the SRA Toolkit.
+genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. 
+SRAToolkit can be used to download data simply by using TOolkit command and accession number for the download. The following command downloads the paired end reads and splits them into two files storing them into *fastq* format.
+This data was downloaded using the *fastq-dump* utility from the SRA Toolkit.
 The command used is:
 ```{sh}
 fastq-dump --split-files SRR948994
@@ -54,3 +56,5 @@ VirtualBox was installed on Ubuntu 16.04 operating system following instuctions 
 1. [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
 
 VirtualBox with name Ubuntu_VM_KP was installed on local machine.
+
+
