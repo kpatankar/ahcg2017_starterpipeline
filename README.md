@@ -57,4 +57,9 @@ VirtualBox was installed on Ubuntu 16.04 operating system following instuctions 
 
 VirtualBox with name Ubuntu_VM_KP was installed on local machine.
 
+```{sh}
+VBoxManage import Ubuntu-64-DR-AHCG2017.ova -p 10022
+VBoxmanage startvm Ubuntu-64-DR-AHCG2017 --type headless
+```
+
 
