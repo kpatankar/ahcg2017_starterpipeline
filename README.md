@@ -61,6 +61,24 @@ VirtualBox with name Ubuntu_VM_KP was installed on local machine.
 VBoxManage import Ubuntu-64-DR-AHCG2017.ova -p 10022
 VBoxmanage startvm Ubuntu-64-DR-AHCG2017 --type headless
 ```
+**Pipeline**
+
+The updated version of pipeline *ahcg_pipeline_v1.0.1.py* was run using input of DNA tumor (NCI-H2126) and matched normal (NCI-H2126 BL) cell line DNA sample data obtained from run number SRR948994
+```{sh}
+python ahcg_pipeline_v1.0.1.py \
+-t /data2/AHCG2017FALL/bin/Trimmomatic-0.36/trimmomatic-0.36.jar \
+-b /data2/AHCG2017FALL/bin/bowtie2-2.2.9/bowtie2 \
+-p /data2/AHCG2017FALL/bin/picard/picard.jar \
+-g /data2/AHCG2017FALL/bin/GenomeAnalysisTK-3.8-0-ge9d806836/GenomeAnalysisTK.jar \
+-i /data2/AHCG2017FALL/data/SRR948994_1.fastq /data2/AHCG2017FALL/data/SRR948994_2.fastq \
+-w /data2/AHCG2017FALL/reference_genome/Bowtie2Index/genome \
+-r /data2/AHCG2017FALL/reference_genome/genome.fa \
+-a /data2/AHCG2017FALL/bin/Trimmomatic-0.36/adapters/NexteraPE-PE.fa \
+-o /data2/AHCG2017FALL/output \
+-d /data2/AHCG2017FALL/reference_genome/GATKResourceBundle/dbsnp_146.hg38.vcf.gz
+```
+
+
 **Calculate Coverage Per Gene**
 Coverage per gene was calculated by GATK toolkit. A genelist was prepared by using UCSC table browser. The coverage was calculated for two genes BRAF and KRAS.
 
