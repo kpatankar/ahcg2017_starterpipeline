@@ -33,12 +33,12 @@ To access help use the following command:
 ```{sh}
 python3 ahcg_pipeline.py -h
 ```
-# **Mission**
+## **Mission**
 The goal of this project is to standardize a variant calling pipeline for the detection of variants in the circulating tumor DNA (ctDNA).
 ctDNA are recent biomarker which can help in deeper understanding of cancer genomics.
 
 
-# **Data Acqusition Team** 
+## **Data Acqusition Team** 
 The data acqusition team used the data from the paper "Development and validation of a clinical cancer
 genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. 
 SRAToolkit can be used to download data simply by using TOolkit command and accession number for the download. The following command downloads the paired end reads and splits them into two files storing them into *fastq* format.
@@ -50,7 +50,7 @@ fastq-dump --split-files SRR948994
 **Dataset2**
 Second dataset was obtained from *Integrated digital error suppression for improved detection of circulating tumor DNA.* paper. The run number is *SRR3502999* This data was used for variant calling using pipeline version *ahcg_pipeline_v1.0.3.py*
 
-# **Installing VirtualBox**
+## **Installing VirtualBox**
 
 VirtualBox is useful to run more than one operating systems simultaneously. It makes software installations easy. It creates an isolated virtual environment from host OS. If anything goes wrong snapshot feature of VirtualBox can reset the VM to particular date/time. Thus, making it easier for testing and disaster recovery.
 
@@ -64,7 +64,7 @@ VirtualBox with name Ubuntu_VM_KP was installed on local machine.
 VBoxManage import Ubuntu-64-DR-AHCG2017.ova -p 10022
 VBoxmanage startvm Ubuntu-64-DR-AHCG2017 --type headless
 ```
-# **Pipeline**
+## **Pipeline**
 
 The updated version of pipeline *ahcg_pipeline_v1.0.1.py* was run using input of DNA tumor (NCI-H2126) and matched normal (NCI-H2126 BL) cell line DNA sample data obtained from run number SRR948994
 ```{sh}
@@ -82,7 +82,7 @@ python ahcg_pipeline_v1.0.1.py \
 ```
 
 
-# **Calculate Coverage Per Gene**
+## **Calculate Coverage Per Gene**
 Coverage per gene was calculated by GATK toolkit. A genelist was prepared by using UCSC table browser. The coverage was calculated for two genes BRAF and KRAS.
 
 ```{sh}
