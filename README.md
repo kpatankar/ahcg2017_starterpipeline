@@ -61,7 +61,7 @@ VirtualBox with name Ubuntu_VM_KP was installed on local machine.
 VBoxManage import Ubuntu-64-DR-AHCG2017.ova -p 10022
 VBoxmanage startvm Ubuntu-64-DR-AHCG2017 --type headless
 ```
-** Calculate Coverage Per Gene **
+**Calculate Coverage Per Gene**
 Coverage per gene was calculated by GATK toolkit. A genelist was prepared by using UCSC table browser. The coverage was calculated for two genes BRAF and KRAS.
 
 ```{sh}
