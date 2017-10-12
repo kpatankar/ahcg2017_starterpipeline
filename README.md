@@ -47,7 +47,7 @@ The command used is:
 ```{sh}
 fastq-dump --split-files SRR948994
 ```
-** Dataset2 **
+**Dataset2**
 Second dataset was obtained from *Integrated digital error suppression for improved detection of circulating tumor DNA.* paper. The run number is *SRR3502999* This data was used for variant calling using pipeline version *ahcg_pipeline_v1.0.3.py*
 
 # **Installing VirtualBox**
