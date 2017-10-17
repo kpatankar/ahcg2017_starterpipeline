@@ -89,3 +89,29 @@ Coverage per gene was calculated by GATK toolkit. A genelist was prepared by usi
 java -jar GenomeAnalysisTK.jar -T DepthOfCoverage --calculateCoverageOverGenes:REFSEQ /data2/users/kpatankar7/geneList.refSeq 
 -R /data2/AHCG2017FALL/reference_genome/genome.fa -o doc_gene_summary -I /data2/AHCG2017FALL/output/SRR948994_1_trimmed_IR.bam 
 ```
+
+**Variant Calling Pipeline designed for detecting variants from exosomal DNA of cancer patients**
+
+Blood samples were collected from cancer patients in 3 tubes (30 ml). The blood sample was centrifuged to obtain plasma/serum. The Extracellular Vesicles were isolated by differential ultracentrifugation at >120000g >2hrs. This centrifugation step removes all blood cells and microvesicles. The nanovesicles are pelleted out.  
+
+**Purifying HMW DNA from exosomal vesicles
+Isolation of Extracellular Vesicles from blood
+liquid biopsy non invasive
+blood/serum
+3 blood tubes approx 3ml
+derive serum/plasma
+isolate nanovesicles/ exosomes by differential ultracentrifugation (>120000g >2hr) 3-4 steps remove all cells and microvesicles
+nanovesicles are pelleted dowm. The pellet contains High Molecular Weight DNA (ng). To isolate the HMW DNA a QUIAGEN HMW isolation kit is used. The resulting exosome pellet was resuspended in buffer solution. 
+
+*Library Preparation*
+Library for sequencing was prepared using illumina NEXTERA kit for exosomal DNA enrichment.
+
+Run illumina hiseq 2500 rapid run to obtain 100 bp paired end sequneces. >200X coverage. 
+
+
+Purify exosomal DNA
+library prep
+Hiseq 
+100bp 
+exome kit to capture all genes
+use 
