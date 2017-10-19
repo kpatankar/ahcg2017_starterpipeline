@@ -100,6 +100,14 @@ Library Preparation for downstream amplification and sequencing was done by usin
 Bioinformatics Analysis
 Custom bioinformatics pipeline was used analyze patient exome. Raw Illumina HiSeq reads were used as input. A python script ahcg_pipeline_v1.0.4.py pipeline was used for calling variants. Trimmomatic was used to trim the adapter sequence from the Illumina HiSeq reads. The reads were aligned to human genome reference build hg38 using Bowtie. The SAM files were processed and manipulated to remove PCR duplicates using Picard. Genome Analysis Toolkit (GATK) was used to perform realignment to local sequences and indel realignment. Base recalibration is done to remove errors caused by sequencer. SNP and indel calling is done by using GATK haplotype caller. The variant calls are stored in vcf format. Coverage per gene is calculated for 70 actionable cancer gene using samtools and bcftools.
 
+**filter variants based on DP and QUAL**
+```{sh}
+java -jar GenomeAnalysisTK.jar -T SelectVariants -R /data2/AHCG2017FALL/reference_genome/genome.fa -V /data2/AHCG2017FALL/output3/variants.vcf -select "DP >= 25 && QUAL >=30" -o /data2/AHCG2017FALL/gene_summary/filtered_vcf.vcf
+
+wc -l filtered_vcf.vcf
+50829 filtered_vcf.vcf
+```
+
 
 
 
