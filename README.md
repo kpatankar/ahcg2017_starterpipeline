@@ -90,28 +90,16 @@ java -jar GenomeAnalysisTK.jar -T DepthOfCoverage --calculateCoverageOverGenes:R
 -R /data2/AHCG2017FALL/reference_genome/genome.fa -o doc_gene_summary -I /data2/AHCG2017FALL/output/SRR948994_1_trimmed_IR.bam 
 ```
 
-**Variant Calling Pipeline designed for detecting variants from exosomal DNA of cancer patients**
-
-Blood samples were collected from cancer patients in 3 tubes (30 ml). The blood sample was centrifuged to obtain plasma/serum. The Extracellular Vesicles were isolated by differential ultracentrifugation at >120000g >2hrs. This centrifugation step removes all blood cells and microvesicles. The nanovesicles are pelleted out.  
-
-**Purifying HMW DNA from exosomal vesicles
-Isolation of Extracellular Vesicles from blood
-liquid biopsy non invasive
-blood/serum
-3 blood tubes approx 3ml
-derive serum/plasma
-isolate nanovesicles/ exosomes by differential ultracentrifugation (>120000g >2hr) 3-4 steps remove all cells and microvesicles
-nanovesicles are pelleted dowm. The pellet contains High Molecular Weight DNA (ng). To isolate the HMW DNA a QUIAGEN HMW isolation kit is used. The resulting exosome pellet was resuspended in buffer solution. 
-
-*Library Preparation*
-Library for sequencing was prepared using illumina NEXTERA kit for exosomal DNA enrichment.
-
-Run illumina hiseq 2500 rapid run to obtain 100 bp paired end sequneces. >200X coverage. 
+## **Workflow**
+Liquid Biopsy Workflow
+Patient blood sample is first collected and subsequent isolation of exosome is done by differential ultracentrifugation protocols. High Molecular Weight (100 -200kb) DNA was extracted for downstream amplification and sequencing. Bioinformatics analysis was performed with a custom pipeline for variant calling. 
+Exosome Isolation and HMW DNA Extraction
+Blood sample from patients was collected using standard blood draw protocol. 30ml of blood was collected from each patient in 3 tubes of volume 10 ml each. Exosome from serum and plasma was isolated by performing a series of differential centrifugation cycle at centrifugal force of >120000g for more than 2 hrs. This step was repeated 3-4 times the supernatant containing the all cells and micro vesicles is discarded. The nanovesicles are pelleted down and the pellet contains nanovesicles with High Molecular Weight DNA(ng). This resulting pellet is used for HMW DNA extraction by MagAttract HMW DNA Kit by Quiagen.
+Library Preparation and Sequencing
+Library Preparation for downstream amplification and sequencing was done by using ILLUMINA Nextera Kit. Exome sequencing was performed by using Illumina HiSeq 2500 Rapid Run with genomic coverage of more than 200X for each sample using 100bp paired end reads. For sequencing the coverage for Illumina HiSeq 2500 rapid run is 200X with the 37 MB genome size. 6 samples can be sequenced at a time. 
+Bioinformatics Analysis
+Custom bioinformatics pipeline was used analyze patient exome. Raw Illumina HiSeq reads were used as input. A python script ahcg_pipeline_v1.0.4.py pipeline was used for calling variants. Trimmomatic was used to trim the adapter sequence from the Illumina HiSeq reads. The reads were aligned to human genome reference build hg38 using Bowtie. The SAM files were processed and manipulated to remove PCR duplicates using Picard. Genome Analysis Toolkit (GATK) was used to perform realignment to local sequences and indel realignment. Base recalibration is done to remove errors caused by sequencer. SNP and indel calling is done by using GATK haplotype caller. The variant calls are stored in vcf format. Coverage per gene is calculated for 70 actionable cancer gene using samtools and bcftools.
 
 
-Purify exosomal DNA
-library prep
-Hiseq 
-100bp 
-exome kit to capture all genes
-use 
+
+
