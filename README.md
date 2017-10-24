@@ -111,6 +111,8 @@ wc -l filtered_vcf.vcf
 
 This pipeline version which can be found on /data2/AHCG2017FALL/bin/pipeline is an updated version in which the variants are filtered on the basis of coverage per gene and quality scores. The pipeline was updated by including GATK SelectVariant command which filteres the final variants_vcf.vcf file to generate filtered variants with coverage per gene of more than 25 and quality score more than 30. 
 
+The High Molecular Weight DNA was isolated from nanovesicles and sequenced using Illumina 2500 rapid run. This pipeline was used for variant calling for two samples MenCo002DNA and MenPa004DNA. The former sample is control and the later is from a cancer patient. This protocol of non-invasive liquid biopsy and isolation of nanovsicles to obtain High Molecular Weight DNA which is a biomarker of cancer incorporated with bioinformatics pipeline to detect variants can be used for early diagnosis of cancer.
+
 
 
 
