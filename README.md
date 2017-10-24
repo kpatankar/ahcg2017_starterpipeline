@@ -107,6 +107,11 @@ java -jar GenomeAnalysisTK.jar -T SelectVariants -R /data2/AHCG2017FALL/referenc
 wc -l filtered_vcf.vcf
 50829 filtered_vcf.vcf
 ```
+**ahcg_pipeline_v1.0.5.py**
+
+This pipeline version which can be found on /data2/AHCG2017FALL/bin/pipeline is an updated version in which the variants are filtered on the basis of coverage per gene and quality scores. The pipeline was updated by including GATK SelectVariant command which filteres the final variants_vcf.vcf file to generate filtered variants with coverage per gene of more than 25 and quality score more than 30. 
+
+
 
 
 
