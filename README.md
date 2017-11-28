@@ -57,9 +57,7 @@ fastq-dump --split-files SRR2530741
 fastq-dump --split-files SRR2530742
 ```
 
-## **Installing VirtualBox**
 
-VirtualBox is useful to run more than one operating systems simultaneously. It makes software installations easy. It creates an isolated virtual environment from host OS. If anything goes wrong snapshot feature of VirtualBox can reset the VM to particular date/time. Thus, making it easier for testing and disaster recovery.
 
 ## **Pipeline**
 
@@ -109,6 +107,11 @@ wc -l filtered_vcf.vcf
 This pipeline version which can be found on /data2/AHCG2017FALL/bin/pipeline is an updated version in which the variants are filtered on the basis of coverage per gene and quality scores. The pipeline was updated by including GATK SelectVariant command which filteres the final variants_vcf.vcf file to generate filtered variants with coverage per gene of more than 25 and quality score more than 30. 
 
 The High Molecular Weight DNA was isolated from nanovesicles and sequenced using Illumina 2500 rapid run. This pipeline was used for variant calling for two samples MenCo002DNA and MenPa004DNA. The former sample is control and the later is from a cancer patient. This protocol of non-invasive liquid biopsy and isolation of nanovsicles to obtain High Molecular Weight DNA which is a biomarker of cancer incorporated with bioinformatics pipeline to detect variants can be used for early diagnosis of cancer.
+
+
+## **Installing VirtualBox**
+
+VirtualBox is useful to run more than one operating systems simultaneously. It makes software installations easy. It creates an isolated virtual environment from host OS. If anything goes wrong snapshot feature of VirtualBox can reset the VM to particular date/time. Thus, making it easier for testing and disaster recovery.
 
 **Installation**
 VirtualBox was installed on Ubuntu 16.04 operating system following instuctions on the link.
