@@ -49,6 +49,13 @@ Third dataset was obtained from control and cancer patient. The sequence data is
 The dataset was provided in the form of two *fastq* files one for control and other for cancer
 
 **Dataset4**
+Dataset4 was obtained from the study *Analysis of ctDNA of the cerebrospinal fluid* The data was obtained from NCBI SRA project, The SRA run numbers SRR2530741 (BMLC2_Germline) and SRR2530742 (BMLC2_Tumor). The data was downlaoded using fastq-dump utility. The data is exome sequencing data with sequencing for samples done using Illumina HiSeq 2000 and exome capture was done using Nextera Rapid Capture Exome Kit. 
+
+Command:
+```{sh}
+fastq-dump --split-files SRR2530741
+fastq-dump --split-files SRR2530742
+```
 
 ## **Installing VirtualBox**
 
