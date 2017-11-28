@@ -61,16 +61,6 @@ fastq-dump --split-files SRR2530742
 
 VirtualBox is useful to run more than one operating systems simultaneously. It makes software installations easy. It creates an isolated virtual environment from host OS. If anything goes wrong snapshot feature of VirtualBox can reset the VM to particular date/time. Thus, making it easier for testing and disaster recovery.
 
-**Installation**
-VirtualBox was installed on Ubuntu 16.04 operating system following instuctions on the link.
-1. [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
-
-VirtualBox with name Ubuntu_VM_KP was installed on local machine.
-
-```{sh}
-VBoxManage import Ubuntu-64-DR-AHCG2017.ova -p 10022
-VBoxmanage startvm Ubuntu-64-DR-AHCG2017 --type headless
-```
 ## **Pipeline**
 
 The updated version of pipeline *ahcg_pipeline_v1.0.1.py* was run using input of DNA tumor (NCI-H2126) and matched normal (NCI-H2126 BL) cell line DNA sample data obtained from run number SRR948994
@@ -120,8 +110,27 @@ This pipeline version which can be found on /data2/AHCG2017FALL/bin/pipeline is 
 
 The High Molecular Weight DNA was isolated from nanovesicles and sequenced using Illumina 2500 rapid run. This pipeline was used for variant calling for two samples MenCo002DNA and MenPa004DNA. The former sample is control and the later is from a cancer patient. This protocol of non-invasive liquid biopsy and isolation of nanovsicles to obtain High Molecular Weight DNA which is a biomarker of cancer incorporated with bioinformatics pipeline to detect variants can be used for early diagnosis of cancer.
 
+**Installation**
+VirtualBox was installed on Ubuntu 16.04 operating system following instuctions on the link.
+1. [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
 
+VirtualBox with name Ubuntu_VM_KP was installed on local machine.
 
+```{sh}
+VBoxManage import Ubuntu-64-DR-AHCG2017.ova -p 10027
+VBoxmanage startvm Ubuntu-64-DR-AHCG2017 --type headless
+```
+Login into the virtualbox was done using the command:
+
+```{sh}
+ssh vannberglab@localhost -p 10027
+```
+
+The data from gpuvannberg server was transferred using command:
+
+```{sh}
+scp -r -P 10027 /data2/AHCG2017FALL vannberglab@localhost:~/
+```
 
 
 
