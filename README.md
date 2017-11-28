@@ -26,10 +26,12 @@ ctDNA are recent biomarker which can help in deeper understanding of cancer geno
 
 
 ## **Data Acqusition Team** 
+As part of the data acquisition team different dataset were obtained from various sources. The datasets were downloaded using SRAToolkit.
+SRAToolkit was used to download data simply by using Toolkit command and accession number for the download. This data was downloaded using the *fastq-dump* utility from the SRA Toolkit. The aforementioned utility downloads the paired end reads and splits them into two files storing them into *fastq* format.
+
 **Dataset1**
-As part of data acquisition team the first dataset i.e the test dataset belonged to the paper "Development and validation of a clinical cancer genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. 
-SRAToolkit was used to download data simply by using Toolkit command and accession number for the download. The following command downloads the paired end reads and splits them into two files storing them into *fastq* format.
-This data was downloaded using the *fastq-dump* utility from the SRA Toolkit.
+The first dataset belonged to the paper "Development and validation of a clinical cancer genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. 
+
 The command used is:
 ```{sh}
 fastq-dump --split-files SRR948994
