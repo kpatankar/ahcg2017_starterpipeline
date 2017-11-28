@@ -30,14 +30,15 @@ As part of the data acquisition team different dataset were obtained from variou
 SRAToolkit was used to download data simply by using Toolkit command and accession number for the download. This data was downloaded using the *fastq-dump* utility from the SRA Toolkit. The aforementioned utility downloads the paired end reads and splits them into two files storing them into *fastq* format.
 
 **Dataset1**
-The first dataset belonged to the paper "Development and validation of a clinical cancer genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. 
+The first dataset belonged to the paper "Development and validation of a clinical cancer genomic profiling test based on massively parallel DNA sequencing". The run numeber is SRR948994. This data was processed using variant calling pipeline version *ahcg_pipeline_v1.0.3.py*
 
-The command used is:
+Command:
 ```{sh}
 fastq-dump --split-files SRR948994
 ```
 **Dataset2**
 Second dataset was obtained from *Integrated digital error suppression for improved detection of circulating tumor DNA.* paper. The run number is *SRR3502999* This data was used for variant calling using pipeline version *ahcg_pipeline_v1.0.3.py*
+
 Command:
 ```{sh}
 fastq-dump --split-files SRR3502999
@@ -46,6 +47,9 @@ fastq-dump --split-files SRR3502999
 **Dataset3**
 Third dataset was obtained from control and cancer patient. The sequence data is derived from exome sequencing of High Molecular Weight DNA isolated from nanovesicles of both control as well as cancer patient. MenCo002DNA and MenPa004DNA. The sequencing machine used was Illumina HiSeq 2500 with libraries for exome prepared using Nextera Rapid Capture Exome kit.
 The dataset was provided in the form of two *fastq* files one for control and other for cancer
+
+**Dataset4**
+
 ## **Installing VirtualBox**
 
 VirtualBox is useful to run more than one operating systems simultaneously. It makes software installations easy. It creates an isolated virtual environment from host OS. If anything goes wrong snapshot feature of VirtualBox can reset the VM to particular date/time. Thus, making it easier for testing and disaster recovery.
