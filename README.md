@@ -69,6 +69,15 @@ fastq-dump --split-files SRR1654220
 
 ## **Pipeline**
 
+The latest version of pipeline *ahcg_pipeline.py* is version 1.0.8 and can be found at the path /data2/AHCG2017FALL/bin/pipeline This version has features as follows:
+1. Trimming Illumina sequence data with Trimmomatic
+2. Aligning reads to the reference genome usign Bowtie2
+3. Copy Number Alteration detection by Control-FREEC tool
+4. Running pipeline using SRR accession number
+5. Filtering Variants using Qual>30 and DP>=25
+6. Calculating avrage, median and max coverage per gene
+
+
 The updated version of pipeline *ahcg_pipeline_v1.0.1.py* was run using input of DNA tumor (NCI-H2126) and matched normal (NCI-H2126 BL) cell line DNA sample data obtained from run number SRR948994
 ```{sh}
 python ahcg_pipeline_v1.0.1.py \
