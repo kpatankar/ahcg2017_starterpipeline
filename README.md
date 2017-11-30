@@ -56,6 +56,14 @@ Command:
 fastq-dump --split-files SRR2530741
 fastq-dump --split-files SRR2530742
 ```
+**Dataset5**
+Dataset5 was obtained from the paper titled *Cerebrospinal fluid-derived circulating tumour DNA better represents the genomic alterations of brain tumours than plasma* published in Nature Communications journal. The dataset used wet biology protocol slightly similar to the dataset3 with focus on whole exome sequencing from the CSF ctDNA using Nextera Rapid Capture Exome Kit and Illumnia HiSeq 2000 as sequencing machine. The samples are exome sequencing data of GBM1 patient both tumor and germline DNA.
+
+Command:
+```{sh}
+fastq-dump --split-files SRR1654210
+fastq-dump --split-files SRR1654220
+```
 
 
 
