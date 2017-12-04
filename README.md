@@ -18,7 +18,7 @@ Reference genomes can be downloaded from [Illumina iGenomes](http://support.illu
 To access help use the following command:
 
 ```{sh}
-python3 ahcg_pipeline.py -h
+./ahcg_pipeline.py -h
 ```
 ## **Mission**
 The goal of this project is to standardize a variant calling pipeline for the detection of variants in the circulating tumor DNA (ctDNA).
