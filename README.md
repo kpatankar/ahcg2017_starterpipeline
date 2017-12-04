@@ -75,6 +75,11 @@ The latest version of pipeline *ahcg_pipeline.py* is version 1.0.8 and can be fo
 3. Filtering Variants using Qual>30 and DP>=25
 4. Calculating average, median and max coverage per gene
 
+Command to run pipeline
+```{sh}
+./ahcg_pipeline.py -c [config file]
+```
+
 
 The updated version of pipeline *ahcg_pipeline_v1.0.1.py* was run using input of DNA tumor (NCI-H2126) and matched normal (NCI-H2126 BL) cell line DNA sample data obtained from run number SRR948994
 ```{sh}
