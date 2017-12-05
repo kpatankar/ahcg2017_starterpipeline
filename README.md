@@ -74,7 +74,7 @@ fastq-dump --split-files SRR1654220
 
 
 ## **Pipeline**
-
+### **ahcg_pipeline_v1.0.8.py**
 The latest version of pipeline *ahcg_pipeline.py* is version 1.0.8 and can be found at the path /data2/AHCG2017FALL/bin/pipeline This version has features as follows:
 1. Copy Number Alteration detection by Control-FREEC tool
 2. Retrieving SRA accession number and running pipeline of SRR sample runs.
@@ -120,6 +120,20 @@ inputFormat     = BAM
 mateOrientation = FR
 
 ```
+### **ahcg_pipeline.v1.0.7.py**
+### **ahcg_pipeline_v1.0.6.py**
+Features
+1. Coverage statistics calculation from final BAM file using samtools
+2. Variant Calling using GATK Haplotype Caller
+3. Filtering Variants Based on DP>=25 and Qual>=30
+4. CNV calling and assessing significance
+5. Run pipeline for SRA samples from SRA accession numbers
+
+### **ahcg_pipeline_v1.0.5.py**
+Fetures
+1. Variant Calling using GATK Haplotype Caller
+2. Variant Filtering based on DP>=25 and QUAL>=30
+
 
 The updated version of pipeline *ahcg_pipeline_v1.0.1.py* was run using input of DNA tumor (NCI-H2126) and matched normal (NCI-H2126 BL) cell line DNA sample data obtained from run number SRR948994
 ```{sh}
