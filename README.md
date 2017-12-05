@@ -9,14 +9,18 @@ Variant calling pipeline for genomic data analysis
 4. [Picard tools - version 2.6.0](https://github.com/broadinstitute/picard/releases/download/2.6.0/picard.jar)
 5. [GATK - version 3.4](https://software.broadinstitute.org/gatk/download/)
 6. [SRAToolkit-version 2.8.0](https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz)
-7. [Control-FREEC](https://github.com/BoevaLab/FREEC/releases)
+7. [Control-FREEC v11.0](https://github.com/BoevaLab/FREEC/archive/v11.0.tar.gz)
+8. [Samtools - v1.6](https://downloads.sourceforge.net/project/samtools/samtools/1.6/samtools-1.6.tar.bz2?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsamtools%2F&ts=1510018121&use_mirror=phoenixnap)
+9. [R language - v3.3.2](https://cran.cnr.berkeley.edu/)
 
 ## Reference genome
 
 Reference genomes can be downloaded from [Illumina iGenomes](http://support.illumina.com/sequencing/sequencing_software/igenome.html)
+```{sh}
+wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/NCBI/GRCh38/Homo_sapiens_NCBI_GRCh38.tar.gz
+```
 
 ## Help
-
 To access help use the following command:
 
 ```{sh}
