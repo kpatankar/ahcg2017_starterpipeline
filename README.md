@@ -8,6 +8,8 @@ Variant calling pipeline for genomic data analysis
 3. [Bowtie2 - version 2.2.9](https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.9/)
 4. [Picard tools - version 2.6.0](https://github.com/broadinstitute/picard/releases/download/2.6.0/picard.jar)
 5. [GATK - version 3.4](https://software.broadinstitute.org/gatk/download/)
+6. [SRAToolkit-version 2.8.0](https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz)
+7. [Control-FREEC](https://github.com/BoevaLab/FREEC/releases)
 
 ## Reference genome
 
@@ -79,7 +81,7 @@ Command to run pipeline
 ```{sh}
 ./ahcg_pipeline.py -c [config file]
 ```
-
+Config File contains the paths to tools and data required to run the pipeline. It also includes inputfilepath and sraid option. If both options are specified inputfile is given priority. 
 
 The updated version of pipeline *ahcg_pipeline_v1.0.1.py* was run using input of DNA tumor (NCI-H2126) and matched normal (NCI-H2126 BL) cell line DNA sample data obtained from run number SRR948994
 ```{sh}
