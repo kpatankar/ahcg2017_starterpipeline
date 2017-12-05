@@ -24,7 +24,7 @@ Reference genomes can be downloaded from [Illumina iGenomes](http://support.illu
 wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Homo_sapiens/NCBI/GRCh38/Homo_sapiens_NCBI_GRCh38.tar.gz
 ```
 
-## Help
+## **Help**
 To access help use the following command:
 
 ```{sh}
@@ -137,7 +137,7 @@ python ahcg_pipeline_v1.0.1.py \
 ```
 
 
-## **Calculate Coverage Per Gene**
+### **Calculate Coverage Per Gene**
 Coverage per gene was calculated by GATK toolkit. A genelist was prepared by using UCSC table browser. The coverage was calculated for two genes BRAF and KRAS.
 
 ```{sh}
@@ -145,7 +145,7 @@ java -jar GenomeAnalysisTK.jar -T DepthOfCoverage --calculateCoverageOverGenes:R
 -R /data2/AHCG2017FALL/reference_genome/genome.fa -o doc_gene_summary -I /data2/AHCG2017FALL/output/SRR948994_1_trimmed_IR.bam 
 ```
 
-## **Workflow**
+### **Workflow**
 Liquid Biopsy Workflow
 Patient blood sample is first collected and subsequent isolation of exosome is done by differential ultracentrifugation protocols. High Molecular Weight (100 -200kb) DNA was extracted for downstream amplification and sequencing. Bioinformatics analysis was performed with a custom pipeline for variant calling. 
 Exosome Isolation and HMW DNA Extraction
@@ -169,7 +169,7 @@ This pipeline version which can be found on /data2/AHCG2017FALL/bin/pipeline is 
 The High Molecular Weight DNA was isolated from nanovesicles and sequenced using Illumina 2500 rapid run. This pipeline was used for variant calling for two samples MenCo002DNA and MenPa004DNA. The former sample is control and the later is from a cancer patient. This protocol of non-invasive liquid biopsy and isolation of nanovsicles to obtain High Molecular Weight DNA which is a biomarker of cancer incorporated with bioinformatics pipeline to detect variants can be used for early diagnosis of cancer.
 
 
-## **Installing VirtualBox**
+### **Installing VirtualBox**
 
 VirtualBox is useful to run more than one operating systems simultaneously. It makes software installations easy. It creates an isolated virtual environment from host OS. If anything goes wrong snapshot feature of VirtualBox can reset the VM to particular date/time. Thus, making it easier for testing and disaster recovery.
 
