@@ -87,6 +87,40 @@ Command to run pipeline
 ```
 Config File contains the paths to tools and data required to run the pipeline. It also includes inputfilepath and sraid option. If both options are specified inputfile is given priority. 
 
+The config file was modified as per the path of folders in the vbox
+```{sh}
+[data]
+inputfiles      = /home/vannberglab/gbm/SRR1654210_1.fastq,/home/vannberglab/gbm/SRR1654210_2.fastq
+#sraid           = SRR1654210
+geneset         = /home/vannberglab/guardant360/guardant360.refGene_hg38.genes.bed
+outputdir       = /home/vannberglab/gbm_output
+
+adapters        = /home/vannberglab/bin/Trimmomatic-0.36/adapters/NexteraPE-PE.fa
+chrlenfile      = /home/vannberglab/reference_genome/chromosomeSizes.txt
+chrfiles        = /home/vannberglab/reference_genome/chroms/
+dbsnp           = /home/vannberglab/reference_genome/GATKResourceBundle/dbsnp_146.hg38.vcf.gz
+index           = /home/vannberglab/reference_genome/Bowtie2Index/genome
+reference       = /home/vannberglab/reference_genome/genome.fa
+
+[tools]
+assesssig       = /home/vannberglab/bin/FREEC/scripts/assess_significance.R
+bowtie2         = /home/vannberglab/bin/bowtie2-2.2.9/bowtie2
+fastq-dump      = /home/vannberglab/bin/sratoolkit/bin/fastq-dump
+freec           = /home/vannberglab/bin/FREEC/src/freec
+gatk            = /home/vannberglab/bin/GenomeAnalysisTK-3.8-0-ge9d806836/GenomeAnalysisTK.jar
+java            = /home/vannberglab/bin/java-1.8/bin/java
+makegraph       = /home/vannberglab/bin/FREEC/scripts/makeGraph.R
+picard          = /home/vannberglab/bin/picard/picard.jar
+samtools        = /home/vannberglab/bin/samtools-1.5/samtools
+trimmomatic     = /home/vannberglab/bin/Trimmomatic-0.36/trimmomatic-0.36.jar
+
+[freec-control]
+mateFile        = /home/vannberglab/final_set/SRR1654222_germline/SRR1654222_1_trimmed_final.bam
+inputFormat     = BAM
+mateOrientation = FR
+
+```
+
 The updated version of pipeline *ahcg_pipeline_v1.0.1.py* was run using input of DNA tumor (NCI-H2126) and matched normal (NCI-H2126 BL) cell line DNA sample data obtained from run number SRR948994
 ```{sh}
 python ahcg_pipeline_v1.0.1.py \
