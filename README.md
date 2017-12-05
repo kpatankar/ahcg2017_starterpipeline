@@ -155,8 +155,11 @@ python ahcg_pipeline_v1.0.1.py \
 Coverage per gene was calculated by GATK toolkit. A genelist was prepared by using UCSC table browser. The coverage was calculated for two genes BRAF and KRAS.
 
 ```{sh}
-java -jar GenomeAnalysisTK.jar -T DepthOfCoverage --calculateCoverageOverGenes:REFSEQ /data2/users/kpatankar7/geneList.refSeq 
--R /data2/AHCG2017FALL/reference_genome/genome.fa -o doc_gene_summary -I /data2/AHCG2017FALL/output/SRR948994_1_trimmed_IR.bam 
+java -jar GenomeAnalysisTK.jar -T DepthOfCoverage 
+\--calculateCoverageOverGenes:REFSEQ /data2/users/kpatankar7/geneList.refSeq 
+\-R /data2/AHCG2017FALL/reference_genome/genome.fa 
+\-o doc_gene_summary 
+\-I /data2/AHCG2017FALL/output/SRR948994_1_trimmed_IR.bam 
 ```
 
 ### **Workflow**
@@ -171,8 +174,12 @@ Custom bioinformatics pipeline was used analyze patient exome. Raw Illumina HiSe
 
 **filter variants based on DP and QUAL**
 ```{sh}
-java -jar GenomeAnalysisTK.jar \-T SelectVariants \-R /data2/AHCG2017FALL/reference_genome/genome.fa \-V /data2/AHCG2017FALL/output3/variants.vcf \-select "DP >= 25 && QUAL >=30" \-o /data2/AHCG2017FALL/gene_summary/filtered_vcf.vcf
-
+java -jar GenomeAnalysisTK.jar 
+\-T SelectVariants 
+\-R /data2/AHCG2017FALL/reference_genome/genome.fa 
+\-V /data2/AHCG2017FALL/output3/variants.vcf 
+\-select "DP >= 25 && QUAL >=30" 
+\-o /data2/AHCG2017FALL/gene_summary/filtered_vcf.vcf
 wc -l filtered_vcf.vcf
 50829 filtered_vcf.vcf
 ```
