@@ -171,7 +171,7 @@ Custom bioinformatics pipeline was used analyze patient exome. Raw Illumina HiSe
 
 **filter variants based on DP and QUAL**
 ```{sh}
-java -jar GenomeAnalysisTK.jar -T SelectVariants -R /data2/AHCG2017FALL/reference_genome/genome.fa -V /data2/AHCG2017FALL/output3/variants.vcf -select "DP >= 25 && QUAL >=30" -o /data2/AHCG2017FALL/gene_summary/filtered_vcf.vcf
+java -jar GenomeAnalysisTK.jar \-T SelectVariants \-R /data2/AHCG2017FALL/reference_genome/genome.fa \-V /data2/AHCG2017FALL/output3/variants.vcf \-select "DP >= 25 && QUAL >=30" \-o /data2/AHCG2017FALL/gene_summary/filtered_vcf.vcf
 
 wc -l filtered_vcf.vcf
 50829 filtered_vcf.vcf
