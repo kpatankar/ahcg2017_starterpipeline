@@ -1,7 +1,11 @@
 # ahcg_pipeline
 Variant calling pipeline for genomic data analysis
 
-## Requirements
+## **Mission**
+The goal of this project is to standardize a variant calling pipeline for the detection of variants in the circulating tumor DNA (ctDNA).
+ctDNA are recent biomarker which can help in deeper understanding of cancer genomics and early detection of cancer. 
+
+## **Requirements**
 
 1. [Python3 - version 3.4.1](https://www.python.org/download/releases/3.4.1/)
 2. [Trimmomatic - version 0.36](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.36.zip)
@@ -13,7 +17,7 @@ Variant calling pipeline for genomic data analysis
 8. [Samtools - v1.6](https://downloads.sourceforge.net/project/samtools/samtools/1.6/samtools-1.6.tar.bz2?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fsamtools%2F&ts=1510018121&use_mirror=phoenixnap)
 9. [R language - v3.3.2](https://cran.cnr.berkeley.edu/)
 
-## Reference genome
+## **Reference genome**
 
 Reference genomes can be downloaded from [Illumina iGenomes](http://support.illumina.com/sequencing/sequencing_software/igenome.html)
 ```{sh}
@@ -26,10 +30,6 @@ To access help use the following command:
 ```{sh}
 ./ahcg_pipeline.py -h
 ```
-## **Mission**
-The goal of this project is to standardize a variant calling pipeline for the detection of variants in the circulating tumor DNA (ctDNA).
-ctDNA are recent biomarker which can help in deeper understanding of cancer genomics.
-
 
 ## **Data Acqusition Team** 
 As part of the data acquisition team different dataset were obtained from various sources. The datasets were downloaded using SRAToolkit.
